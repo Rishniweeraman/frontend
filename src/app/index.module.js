@@ -20,9 +20,9 @@ angular.module('pharmacyFrontEndProject', ['ui.router', 'ui.bootstrap', 'toastr'
   .run(runBlock)
   .service('githubContributor', GithubContributorService)
   .service('webDevTec', WebDevTecService)
-  .controller('MainController', MainController)
   .controller('assistantPharmacistController', assistantPharmacistController)
   .controller('chiefPharmacistController', chiefPharmacistController)
   .controller('doctorController', doctorController)
+  .controller('MainController', MainController)
   .directive('acmeNavbar', NavbarDirective)
   .directive('acmeMalarkey', MalarkeyDirective);
