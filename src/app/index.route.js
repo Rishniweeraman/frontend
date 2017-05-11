@@ -24,6 +24,12 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
       templateUrl: 'app/doctor/doctor.html',
       controller: 'doctorController',
       controllerAs: 'doctor'
+    })
+    .state('authenticate', {
+      url: '/authenticate',
+      templateUrl: 'app/authenticate/authenticate.html',
+      controller: 'authenticateController',
+      controllerAs: 'authenticate'
     });
 
   $urlRouterProvider.otherwise('/');
