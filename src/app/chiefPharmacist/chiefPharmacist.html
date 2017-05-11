@@ -10,7 +10,7 @@
 <div >
   <nav style="float: left;width: 200px;height: 1000px;background-color: #00b3ee;font-size: large;font-style: oblique">
     <ul style="list-style-type: none">
-      <li style="padding-top: 10px;padding-bottom: 10px;display: inline-block;background-color: yellow;width: 150px"><a ng-href="#">Home</a></li>
+      <li style="padding-top: 10px;padding-bottom: 10px;display: inline-block;background-color: yellow;width: 150px"><a ng-href="#/pharmacyStock">Home</a></li>
       <li style="padding-top: 10px;padding-bottom: 10px"><a ng-href="#">Add Drugs</a></li>
       <li style="padding-top: 10px;padding-bottom: 10px"><a ng-href="#">Update Drugs</a></li>
       <li style="padding-top: 10px;padding-bottom: 10px"><a ng-href="#">Add New Batch</a></li>
@@ -21,7 +21,17 @@
   </nav>
 
   <div style="width: 1350px;height: 1000px;background-color: azure">
-    <p>jfjyjc vkbk</p>
+    <div class="panel panel-default">
+      <div class="panel-heading">Post a message</div>
+      <div class="panel-body">
+        <div class="input-group">
+          <textarea class="form-control custom-control" rows="3" style="resize: none" ng-model="chiefPharmacist.message"></textarea>
+          <span class="input-group-addon btn btn-primary" ng-click="chiefPharmacist.postMessage()">Post</span>
+
+        </div>
+
+      </div>
+    </div>
   </div>
 </div>
 
