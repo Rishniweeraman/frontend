@@ -7,6 +7,7 @@ import { MainController } from './main/main.controller';
 import { assistantPharmacistController } from './assistantPharmacist/assistantPharmacist.controller';
 import { chiefPharmacistController } from './chiefPharmacist/chiefPharmacist.controller';
 import { doctorController } from './doctor/doctor.controller';
+import { authenticateController } from './authenticate/authenticate.controller';
 import { GithubContributorService } from '../app/components/githubContributor/githubContributor.service';
 import { WebDevTecService } from '../app/components/webDevTec/webDevTec.service';
 import { NavbarDirective } from '../app/components/navbar/navbar.directive';
@@ -24,5 +25,6 @@ angular.module('pharmacyFrontEndProject', ['ui.router', 'ui.bootstrap', 'toastr'
   .controller('chiefPharmacistController', chiefPharmacistController)
   .controller('doctorController', doctorController)
   .controller('MainController', MainController)
+  .controller('authenticateController', authenticateController)
   .directive('acmeNavbar', NavbarDirective)
   .directive('acmeMalarkey', MalarkeyDirective);
