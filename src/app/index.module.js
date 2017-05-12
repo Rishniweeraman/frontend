@@ -7,6 +7,7 @@ import { MainController } from './main/main.controller';
 import { assistantPharmacistController } from './assistantPharmacist/assistantPharmacist.controller';
 import { chiefPharmacistController } from './chiefPharmacist/chiefPharmacist.controller';
 import { doctorController } from './doctor/doctor.controller';
+
 import { authenticateController } from './authenticate/authenticate.controller';
 import { pharmacyStockController } from './chiefPharmacist/pharmacyStock/pharmacyStock.controller';
 import { addDrugsController } from './chiefPharmacist/addDrugs/addDrugs.controller';
@@ -15,6 +16,7 @@ import { reportsController } from './chiefPharmacist/reports/reports.controller'
 import { updateDrugsController } from './chiefPharmacist/updateDrugs/updateDrugs.controller';
 import { viewRequestsController } from './chiefPharmacist/viewRequests/viewRequests.controller';
 import { drugInformationController } from './chiefPharmacist/drugInformation/drugInformation.controller';
+
 import { GithubContributorService } from '../app/components/githubContributor/githubContributor.service';
 import { WebDevTecService } from '../app/components/webDevTec/webDevTec.service';
 import { NavbarDirective } from '../app/components/navbar/navbar.directive';
@@ -32,6 +34,7 @@ angular.module('pharmacyFrontEndProject', ['ui.router', 'ui.bootstrap', 'toastr'
   .controller('chiefPharmacistController', chiefPharmacistController)
   .controller('doctorController', doctorController)
   .controller('MainController', MainController)
+
   .controller('authenticateController', authenticateController)
   .controller('pharmacyStockController', pharmacyStockController)
   .controller('addDrugsController', addDrugsController)
@@ -40,5 +43,6 @@ angular.module('pharmacyFrontEndProject', ['ui.router', 'ui.bootstrap', 'toastr'
   .controller('reportsController', reportsController)
   .controller('updateDrugsController', updateDrugsController)
   .controller('viewRequestsController', viewRequestsController)
+
   .directive('acmeNavbar', NavbarDirective)
   .directive('acmeMalarkey', MalarkeyDirective);

@@ -5,7 +5,7 @@
       "angularVersion": "~1.5.3",
       "angularModules": [],
       "jQuery": {
-        "key": "jqLite"
+        "key": "jquery2"
       },
       "resource": {
         "key": "$http",
