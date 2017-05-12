@@ -1,7 +1,7 @@
 /**
- * Created by User on 5/10/2017.
+ * Created by User on 5/11/2017.
  */
-export class pharmacyStockController {
+export class reportsController {
   constructor ($timeout, webDevTec, toastr) {
     'ngInject';
 
