@@ -1,10 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-pharmacy stock
-</body>
-</html>
+<div >
+  <nav style="float: left;width: 200px;height: 1000px;background-color: #00b3ee;font-size: large;font-style: oblique">
+    <ul style="list-style-type: none">
+      <li style="padding-top: 10px;padding-bottom: 10px;display: inline-block;background-color: yellow;width: 150px"><a ng-href="#/chiefPharmacist/pharmacyStock">Home</a></li>
+      <li style="padding-top: 10px;padding-bottom: 10px"><a ng-href="#/chiefPharmacist/addDrugs">Add Drugs</a></li>
+      <li style="padding-top: 10px;padding-bottom: 10px"><a ng-href="#/chiefPharmacist/updateDrugs">Update Drugs</a></li>
+      <li style="padding-top: 10px;padding-bottom: 10px"><a ng-href="#/chiefPharmacist/addNewBatch">Add New Batch</a></li>
+      <li style="padding-top: 10px;padding-bottom: 10px"><a ng-href="#/chiefPharmacist/viewRequests">View Requests</a></li>
+      <li style="padding-top: 10px;padding-bottom: 10px"><a ng-href="#/chiefPharmacist/drugInformation">Drug Information</a></li>
+      <li style="padding-top: 10px;padding-bottom: 10px"><a ng-href="#/chiefPharmacist/reports">Reports</a></li>
+    </ul>
+  </nav>
+
+  <div style="width: 1350px;height: 1000px;background-color: azure">
+    <div class="col-md-10">
+      <div class="panel panel-default">
+        <div class="panel-heading">Pharmacy Stock</div>
+        <div class="panel-body">
+
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>Drug Name</th>
+              <th>Unit Type</th>
+              <th>Drug Category</th>
+              <th>Drug Price</th>
+              <th>Drug Quantity</th>
+              <th>Send Mail</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="drug in pharmacyStock.drugs">
+              <td>{{drug.name}}</td>
+              <td>{{drug.unitType}}</td>
+              <td>{{drug.category}}</td>
+              <td>{{drug.price}}</td>
+              <td>{{drug.quantity}}</td>
+              <td><button type="button" class="btn btn-default" style="background-color: #2f96b4" >Place Order</button></td>
+            </tr>
+            </tbody>
+          </table>
+          <button type="button" class="btn btn-default" style="background-color: #2f96b4" >View as PDF</button>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="input-group">
+          <textarea class="form-control custom-control" rows="3" style="resize: none" ng-model="pharmacyStock.drug"></textarea>
+          <span class="input-group-addon btn btn-primary" ng-click="pharmacyStock.postMessage()">Post</span>
+
+        </div>
+      </div>
+    </div>
+
+    <!--
+    <div class="col-md-10">
+      <div class="panel panel-default">
+        <div class="panel-heading">Messages</div>
+        <div class="panel-body">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>Drug Name</th>
+              <th>Unit Type</th>
+              <th>Drug Category</th>
+              <th>Drug Price</th>
+              <th>Drug Quantity</th>
+              <th>Send Mail</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="drug in pharmacyStock.drugs">
+              <td>{{drug.name}}</td>
+              <td>{{drug.unitType}}</td>
+              <td>{{drug.category}}</td>
+              <td>{{drug.price}}</td>
+              <td>{{drug.quantity}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <!--
+          <ul class="list-group">
+            <li class="list-group-item" ng-repeat="drug in pharmacyStock.drugs">
+              {{drug.name}}
+
+
+            </li>
+          </ul>
+-->
+        </div>
+      </div>
+    </div>
+    -->
+  </div>
+</div>

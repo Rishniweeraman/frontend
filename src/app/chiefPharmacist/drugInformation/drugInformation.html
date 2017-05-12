@@ -1,10 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-drug information
-</body>
-</html>
+<div >
+  <nav style="float: left;width: 200px;height: 1000px;background-color: #00b3ee;font-size: large;font-style: oblique">
+    <ul style="list-style-type: none">
+      <li style="padding-top: 10px;padding-bottom: 10px;display: inline-block;background-color: yellow;width: 150px"><a ng-href="#/chiefPharmacist/pharmacyStock">Home</a></li>
+      <li style="padding-top: 10px;padding-bottom: 10px"><a ng-href="#/chiefPharmacist/addDrugs">Add Drugs</a></li>
+      <li style="padding-top: 10px;padding-bottom: 10px"><a ng-href="#/chiefPharmacist/updateDrugs">Update Drugs</a></li>
+      <li style="padding-top: 10px;padding-bottom: 10px"><a ng-href="#/chiefPharmacist/addNewBatch">Add New Batch</a></li>
+      <li style="padding-top: 10px;padding-bottom: 10px"><a ng-href="#/chiefPharmacist/viewRequests">View Requests</a></li>
+      <li style="padding-top: 10px;padding-bottom: 10px"><a ng-href="#/chiefPharmacist/drugInformation">Drug Information</a></li>
+      <li style="padding-top: 10px;padding-bottom: 10px"><a ng-href="#/chiefPharmacist/reports">Reports</a></li>
+    </ul>
+  </nav>
+
+  <div style="width: 1350px;height: 1000px;background-color: azure">
+    <div class="col-md-10">
+      <div class="panel panel-default">
+        <div class="panel-heading">Drug Information</div>
+        <div class="panel-body">
+          <form>
+            <div class="form-group" ng-controller="drugInformationController">
+              <label>Drug Category :</label>
+              <select ng-model="test" ng-options="msg for msg in messages">{{message.msg}}
+                <!--<option value="selectDrugCategory">Select Drug Category</option>
+                <option ng-repeat="msg in test.messages">{{messages.msg}}</option>
+
+                <option value="narcotis">Narcotis</option>
+                <option value="injection">Drugs used in the treatment of injections</option>
+                <option value="cardiovascular">Drugs used in the treatment of cardiovascular system</option>
+              -->
+              </select>
+
+            </div>
+
+            <div class="form-group">
+              <label>Drug Name :</label>
+              <!--<<select ng-model="test" ng-options="msg for msg in messages">{{message.msg}}-->
+               <!--<option value="selectDrugCategory">Select Drug Category</option>-->
+               <select> <option ng-repeat="message in drugInformation.messages">{{messages.msg}}</option>
+<!--
+                <option value="narcotis">Narcotis</option>
+                <option value="injection">Drugs used in the treatment of injections</option>
+                <option value="cardiovascular">Drugs used in the treatment of cardiovascular system</option>
+-->
+              </select>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">Messages</div>
+        <div class="panel-body">
+          <ul class="list-group">
+            <li class="list-group-item" ng-repeat="message in chiefPharmacist.messages">
+              {{message.msg}}
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
