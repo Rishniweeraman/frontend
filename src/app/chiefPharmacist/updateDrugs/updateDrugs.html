@@ -3,10 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
-
+  <style>
+    .container{
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    input[type=text],select,textarea{
+      width: 70%;
+      padding: 12px;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+  </style>
 </head>
 <body>
+
 <div >
   <nav style="float: left;width: 200px;height: 1000px;background-color: #00b3ee;font-size: large;font-style: oblique">
     <ul style="list-style-type: none">
@@ -21,32 +37,31 @@
   </nav>
 
   <div style="width: 1350px;height: 1000px;background-color: azure">
-    <div class="panel panel-default">
-      <div class="panel-heading">Post a message</div>
-      <div class="panel-body">
-        <div class="input-group">
-          <textarea class="form-control custom-control" rows="3" style="resize: none" ng-model="chiefPharmacist.message"></textarea>
-          <span class="input-group-addon btn btn-primary" ng-click="chiefPharmacist.postMessage()">Post</span>
-
-        </div>
-
-      </div>
+<h3>Update Drugs</h3>
+    <div class="container">
+      <form>
+        <label>Drug Category</label>
+        <select>
+          <option value="1">1</option>
+        </select><br>
+        <label>Drug Name  </label>
+        <select>
+          <option value="ee">ee</option>
+        </select><br>
+        <label>Drug Type</label>
+        <input type="text"><br>
+        <label> Unit Price</label>
+        <input type="text"><br>
+        <label>Reorder Level</label>
+        <input type="text"><br>
+        <label>Danger Level</label>
+        <input type="text"><br>
+        <label>Remarks</label>
+        <input type="text"><br>
+        <input type="button" value="Update Drugs">
+      </form>
     </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">Messages</div>
-      <div class="panel-body">
-        <ul class="list-group">
-          <li class="list-group-item" ng-repeat="message in chiefPharmacist.messages">
-            {{message.msg}}
-          </li>
-        </ul>
-
-      </div>
-    </div>
-
-
   </div>
 </div>
-
 </body>
 </html>

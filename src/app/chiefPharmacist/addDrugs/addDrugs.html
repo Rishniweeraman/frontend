@@ -1,10 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
+  <meta charset="utf-8">
+  <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+
+
+  <title>addDrugs</title>
+  <style>
+    .container{
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    input[type=text],select,textarea{
+      width: 70%;
+      padding: 12px;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+
+    }
+    .form{
+      width: 90%;
+      padding: 12px 20px;
+      margin:8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      text-align:match-parent;
+    }
+    .form-back{
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+  </style>
+  <head>
 <body>
-$END$
+
+<div >
+
+  <nav style="float: left;width: 100px;height:750px;background-color: #00b3ee;font-size:smaller;font-style: oblique">
+    <ul style="list-style-type: none">
+      <li style="padding-top: 10px;padding-bottom: 10px;width: 150px"><a ng-href="#/pharmacyStock">Home</a></li>
+      <li style="padding-top: 10px;padding-bottom: 10px"><a ng-href="#/chiefPharmacist/addDrugs">Add Drugs</a></li>
+      <li style="padding-top: 10px;padding-bottom: 10px"><a ng-href="#/chiefPharmacist/updateDrugs">Update Drugs</a></li>
+      <li style="padding-top: 10px;padding-bottom: 10px"><a ng-href="#/chiefPharmacist/addNewBatch">Add New Batch</a></li>
+         </ul>
+
+  </nav>
+</div>
+<div class="form-back">
+  <form class="form">
+    <div class="box-body">
+      <label>Add Drugs</label>
+      <form method="post" action="drugNameview" enctype="multipart/form-data"  >
+        <input type="file"  name="file" />
+        <br />
+        <input type="submit"  name="submit" value="Submit">
+      </form>
+      <!--Add drugs manuallay-->
+    </div>
+    <label for="Drug">Add Drugs Manually</label>
+    <br>
+    <label style="font-size: smaller">Drug Name</label><br>
+    <input type="text" id="Drug" name="Drug">
+  </form>
+</div>
+
+
 </body>
 </html>
+

@@ -1,7 +1,7 @@
 /**
  * Created by User on 5/10/2017.
  */
-export class chiefPharmacistController {
+export class addNewBatchcontroller {
   constructor ($http) {
     'ngInject';
 
@@ -9,8 +9,8 @@ export class chiefPharmacistController {
     this.getMessages();
   }
   getMessages(){
-      var vm=this;
-      this.$http.get('http://localhost:5000/api/message').then(function (result) {
+    var vm=this;
+    this.$http.get('http://localhost:5000/api/message').then(function (result) {
       vm.messages=result.data;
     });
   }
