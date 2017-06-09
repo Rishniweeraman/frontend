@@ -6,6 +6,7 @@ export class drugInformationController {
     'ngInject';
 
     this.$http=$http;
+    this.getDrugs();
     this.getMessages();
   }
   getMessages(){
@@ -15,4 +16,10 @@ export class drugInformationController {
     });
   }
 
+  getDrugs(){
+    var vm=this;
+    this.$http.get('http://localhost:5000/api/drug').then(function (result) {
+      vm.drugs=result.data;
+    });
+  }
 }

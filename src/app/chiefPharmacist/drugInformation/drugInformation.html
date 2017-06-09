@@ -19,28 +19,37 @@
           <form>
             <div class="form-group" ng-controller="drugInformationController">
               <label>Drug Category :</label>
-              <select ng-model="test" ng-options="msg for msg in messages">{{message.msg}}
-                <!--<option value="selectDrugCategory">Select Drug Category</option>
-                <option ng-repeat="msg in test.messages">{{messages.msg}}</option>
+         <!--     <select ng-model="test" ng-options="msg for msg in messages">{{message.msg}}-->
+              <!--       <select ng-model="test" ng-options="drug in pharmacyStock.drugs">{{drug.name}}-->
+              <select ng-model="test" ng-options="drug.category for drug in drugInformation.drugs">
+                <option value="">Select drug category</option>
+                       <!--<select ng-model="test" > -->
 
-                <option value="narcotis">Narcotis</option>
-                <option value="injection">Drugs used in the treatment of injections</option>
-                <option value="cardiovascular">Drugs used in the treatment of cardiovascular system</option>
-              -->
+                     <!--<option value="selectDrugCategory">Select Drug Category</option>
+                     <option ng-repeat="msg in test.messages">{{messages.msg}}</option>-->
+
+                <!--      <option ng-repeat="drug in pharmacyStock.drugs">{{drug.name}}</option>  -->
+             <!--
+                    <option value="narcotis">Narcotis</option>
+                    <option value="injection">Drugs used in the treatment of injections</option>
+                    <option value="cardiovascular">Drugs used in the treatment of cardiovascular system</option>
+                  -->
               </select>
 
             </div>
 
             <div class="form-group">
               <label>Drug Name :</label>
+              <select ng-model="test" ng-options="drug.name for drug in drugInformation.drugs">
+                <option value="">Select drug name</option>
               <!--<<select ng-model="test" ng-options="msg for msg in messages">{{message.msg}}-->
                <!--<option value="selectDrugCategory">Select Drug Category</option>-->
-               <select> <option ng-repeat="message in drugInformation.messages">{{messages.msg}}</option>
-<!--
-                <option value="narcotis">Narcotis</option>
-                <option value="injection">Drugs used in the treatment of injections</option>
-                <option value="cardiovascular">Drugs used in the treatment of cardiovascular system</option>
--->
+                <!--   <select> <option ng-repeat="message in drugInformation.messages">{{messages.msg}}</option> -->
+    <!--
+                    <option value="narcotis">Narcotis</option>
+                    <option value="injection">Drugs used in the treatment of injections</option>
+                    <option value="cardiovascular">Drugs used in the treatment of cardiovascular system</option>
+    -->
               </select>
             </div>
 
