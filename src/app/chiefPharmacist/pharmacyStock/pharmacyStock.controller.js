@@ -2,34 +2,19 @@
  * Created by User on 5/10/2017.
  */
 export class pharmacyStockController {
-  constructor ($timeout, webDevTec, toastr) {
+  constructor ($http) {
     'ngInject';
 
-    this.awesomeThings = [];
-    this.classAnimation = '';
-    this.creationDate = 1494087274486;
-    this.toastr = toastr;
-
-    this.activate($timeout, webDevTec);
+    this.$http=$http;
+    this.getDrugs();
   }
-
-  activate($timeout, webDevTec) {
-    this.getWebDevTec(webDevTec);
-    $timeout(() => {
-      this.classAnimation = 'rubberBand';
-    }, 4000);
-  }
-
-  getWebDevTec(webDevTec) {
-    this.awesomeThings = webDevTec.getTec();
-
-    angular.forEach(this.awesomeThings, (awesomeThing) => {
-      awesomeThing.rank = Math.random();
+  getDrugs(){
+    var vm=this;
+    this.$http.get('http://localhost:5000/api/drug').then(function (result) {
+      vm.drugs=result.data;
     });
   }
-
-  showToastr() {
-    this.toastr.info('Fork <a href="https://github.com/Swiip/generator-gulp-angular" target="_blank"><b>generator-gulp-angular</b></a>');
-    this.classAnimation = '';
+  postMessage(){
+    this.$http.post('http://localhost:5000/api/drug',{name:this.drug});
   }
 }
