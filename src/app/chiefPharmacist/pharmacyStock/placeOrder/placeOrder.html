@@ -1,0 +1,91 @@
+<div >
+  <nav style="float: left;width: 200px;height: 1000px;background-color: #00b3ee;font-size: large;font-style: oblique">
+    <ul style="list-style-type: none">
+      <li style="padding-top: 10px;padding-bottom: 10px;display: inline-block;background-color: yellow;width: 150px"><a ng-href="#/chiefPharmacist/pharmacyStock">Home</a></li>
+      <li style="padding-top: 10px;padding-bottom: 10px"><a ng-href="#/chiefPharmacist/addDrugs">Add Drugs</a></li>
+      <li style="padding-top: 10px;padding-bottom: 10px"><a ng-href="#/chiefPharmacist/updateDrugs">Update Drugs</a></li>
+      <li style="padding-top: 10px;padding-bottom: 10px"><a ng-href="#/chiefPharmacist/addNewBatch">Add New Batch</a></li>
+      <li style="padding-top: 10px;padding-bottom: 10px"><a ng-href="#/chiefPharmacist/viewRequests">View Requests</a></li>
+      <li style="padding-top: 10px;padding-bottom: 10px"><a ng-href="#/chiefPharmacist/drugInformation">Drug Information</a></li>
+      <li style="padding-top: 10px;padding-bottom: 10px"><a ng-href="#/chiefPharmacist/reports">Reports</a></li>
+    </ul>
+  </nav>
+
+  <div style="width: 1350px;height: 1000px;background-color: azure">
+    <div class="col-md-10">
+      <div class="panel panel-default">
+        <div class="panel-heading" style="font-family: Calibri;font-size: 25px">Drug Request Mail Sender</div>
+
+        <div class="panel-body" style="overflow-x:auto;overflow-y:auto">
+
+
+          <table class="table table-striped" style="width:100%;white-space:nowrap">
+
+            <tbody>
+            <tr>
+              <td>From:</td>
+              <td><input type="text" style="width: 900px"></td>
+            </tr>
+
+            <tr>
+              <td>To:</td>
+              <td><input type="text" style="width: 900px"></td>
+            </tr>
+
+            <tr>
+              <td>Subject:</td>
+              <td><input type="text" style="width: 900px"></td>
+            </tr>
+
+            <tr>
+              <td>Content:</td>
+              <td><textarea style="width: 900px"></textarea></td>
+            </tr>
+
+            </tbody>
+          </table>
+          <button type="button" class="btn btn-primary">Send</button>
+        </div>
+
+        <div class="panel-heading" style="font-family: Calibri;font-size: 25px">Mail History for Selected Drugs</div>
+        <div class="panel-body" style="overflow-x:auto;overflow-y:auto">
+          <table class="table table-striped" style="width:100%;white-space:nowrap">
+            <thead>
+              <tr>
+                <th>Content</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+              <td>shlsfhsoifsifcjyxcjgxhxhxjx gnjgkhoogoguo ksfousgfuosgfousgfuos gosufgsufvsufvsufgsofiusofs sofgsoudfgsufsfubsfus sogfsdoufgsdufsu sjdbvsouvsv svbsduvbsovibsovcsb ovsouhsodibsc sbvosdhvoisdvhs sodvsouvhsoifsoihsodivsodivsdv sofhsoidfhs os of o o fwofwoei wfo wwhow fwohg</td>
+              <td>3/6/2017</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+
+
+
+
+        <br>
+        <br>
+        <br>
+        <div class="input-group">
+          <textarea class="form-control custom-control" rows="3" style="resize: none" ng-model="pharmacyStock.drug"></textarea>
+          <span class="input-group-addon btn btn-primary" ng-click="pharmacyStock.postMessage()">Post</span>
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+</div>
+
+</div>
+</div>
