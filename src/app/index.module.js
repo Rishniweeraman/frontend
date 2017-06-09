@@ -17,6 +17,8 @@ import { updateDrugsController } from './chiefPharmacist/updateDrugs/updateDrugs
 import { viewRequestsController } from './chiefPharmacist/viewRequests/viewRequests.controller';
 import { drugInformationController } from './chiefPharmacist/drugInformation/drugInformation.controller';
 
+import { placeOrderController } from './chiefPharmacist/pharmacyStock/placeOrder/placeOrder.controller';
+
 import { GithubContributorService } from '../app/components/githubContributor/githubContributor.service';
 import { WebDevTecService } from '../app/components/webDevTec/webDevTec.service';
 import { NavbarDirective } from '../app/components/navbar/navbar.directive';
@@ -44,6 +46,8 @@ angular.module('pharmacyFrontEndProject', ['ui.router', 'ui.bootstrap', 'toastr'
   .controller('reportsController', reportsController)
   .controller('updateDrugsController', updateDrugsController)
   .controller('viewRequestsController', viewRequestsController)
+
+  .controller('placeOrderController', placeOrderController)
 
   .directive('acmeNavbar', NavbarDirective)
   .directive('acmeMalarkey', MalarkeyDirective);

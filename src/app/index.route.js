@@ -74,7 +74,14 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
       controller: 'viewRequestsController',
       controllerAs: 'viewRequests'
 
-    });
+    })
+    .state('placeOrder', {
+    url: '/chiefPharmacist/pharmacyStock/placeOrder',
+    templateUrl: 'app/chiefPharmacist/pharmacyStock/placeOrder/placeOrder.html',
+    controller: 'placeOrderController',
+    controllerAs: 'placeOrder'
+
+  });
 
   $urlRouterProvider.otherwise('/');
 }
